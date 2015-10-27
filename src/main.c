@@ -7,14 +7,32 @@
 #define DELIMS " \t\r\n"
 
 int main(int argc, char *argv[]) {
+
+   // Execute main subroutine for shell
+   init();
+
+}
+
+init(void) {
+
   char line[MAX_LENGTH];
+  
 
   while (1) {
-    char *sysName = "mattias";
-    printf("%s=> ", sysName);
+    char *sysName = "Sea#Shells";
+    char *cmd;
+
+    printf("%s ~> ", sysName);
     if (!fgets(line, MAX_LENGTH, stdin)) break;
     system(line);
+ 
+    if ((cmd = strtok(line, DELIMS))) {
+        errno = 0;
+        if (strcmp(cmd, "a") == 0) {
+            char *arg = strtok(0, DELIMS);
+            printf("edffffffff\n");    
+        } 
+    }
   }
 
-  return 0;
 }
