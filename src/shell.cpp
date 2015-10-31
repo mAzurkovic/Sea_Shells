@@ -10,21 +10,46 @@
 #define CHAR 1024
 using namespace std;
 
-int main()
+int init()
 {
-  
+
     string cmd;
 
     while (cmd != "exit") {
 
-    if (cmd == "gook") {
-        system("date");
+        if (cmd == "about") {
+            cout << "           _.-''|''-._\n";
+            cout << "       .-'      |     `-.\n";
+            cout << "     .' \\       |       /`.\n";
+            cout << "   .'    \\      |      /   `.\n";
+            cout << "   \\      \\     |     /     /\n";
+            cout << "    `\\     \\    |    /    /'\n";
+            cout << "       `\\   \\   |   /   /'\n";
+            cout << "         `\\  \\  |  /  /'\n";
+            cout << "        _.-`\\ \\ | / /'-._\n";
+            cout << "       {_____` \\|/'_____}\n";
+            cout << "               `-'\n";
+
+
+         
+        }
+
+        if (cmd == "date") {
+            system("date");
+        }
+
+        cout << "#SEA ~> ";
+        cin >> cmd;
+
     }
 
-    cout << "#SEA ~> ";
-    cin >> cmd;
 
-    }
- 
-  return 0;
+}
+
+int main()
+{
+    
+    init();
+  
+    return 0;
 }
