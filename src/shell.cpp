@@ -32,9 +32,11 @@ int init()
 {
 
     string cmd;
+    
+    cout << "Welcome to Sea Shells - a Linux command line shell interface.\n";    
 
     while (cmd != "exit") {
-
+        
         if (cmd == "about") {
             about(); 
         }
@@ -46,19 +48,21 @@ int init()
         if (cmd == "vim") {
             system("vim");
         }
-
-        cout << "#SEA ~> ";
+   
+        if (cmd == "ls") {
+            system("ls");
+        }
+ 
+        cout << "~> ";
         cin >> cmd;
 
     }
-    cout << "BYE\n";
+    cout << "Good Bye\n";
 
 }
 
 int main()
-{
-    
+{   
     init();
-  
     return 0;
 }
