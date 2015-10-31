@@ -10,6 +10,24 @@
 #define CHAR 1024
 using namespace std;
 
+int about()
+{
+   cout << "           _.-''|''-._\n";
+   cout << "       .-'      |     `-.\n";
+   cout << "     .' \\       |       /`.\n";
+   cout << "   .'    \\      |      /   `.\n";
+   cout << "   \\      \\     |     /     /\n";
+   cout << "    `\\     \\    |    /    /'\n";
+   cout << "       `\\   \\   |   /   /'\n";
+   cout << "         `\\  \\  |  /  /'\n";
+   cout << "        _.-`\\ \\ | / /'-._\n";
+   cout << "       {_____` \\|/'_____}\n";
+   cout << "               `-'\n";
+
+   cout << "Sea Shells is a Linux shell developed by Mattias Zurkovic.\n";
+   cout << "See the code base and ask questions - https://github.com/mAzurkovic/Sea_Shells\n";
+}
+
 int init()
 {
 
@@ -18,31 +36,22 @@ int init()
     while (cmd != "exit") {
 
         if (cmd == "about") {
-            cout << "           _.-''|''-._\n";
-            cout << "       .-'      |     `-.\n";
-            cout << "     .' \\       |       /`.\n";
-            cout << "   .'    \\      |      /   `.\n";
-            cout << "   \\      \\     |     /     /\n";
-            cout << "    `\\     \\    |    /    /'\n";
-            cout << "       `\\   \\   |   /   /'\n";
-            cout << "         `\\  \\  |  /  /'\n";
-            cout << "        _.-`\\ \\ | / /'-._\n";
-            cout << "       {_____` \\|/'_____}\n";
-            cout << "               `-'\n";
-
-
-         
+            about(); 
         }
 
         if (cmd == "date") {
             system("date");
         }
 
+        if (cmd == "vim") {
+            system("vim");
+        }
+
         cout << "#SEA ~> ";
         cin >> cmd;
 
     }
-
+    cout << "BYE\n";
 
 }
 
