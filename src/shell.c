@@ -19,8 +19,8 @@ int main()
 
     while(1) {
         // Print command prompt
-        char* username = getenv("USER");
-        printf("%s@shell %d> ", username, ++cmdCount);
+        char* usr = getenv("USER");
+        printf("%s@shell > ", usr);
 
         // Read command from standard input, exit on Ctrl+D
         if(fgets(cmd, sizeof(cmd), stdin) == NULL) break;
